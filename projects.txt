@@ -4,4 +4,10 @@
 # commands=valor
 # cada projeto deve ser separado por uma linha
 
+alias_name=value
+target_dir_name=value
+commands=value; value
 
+alias_name=value
+target_dir_name=value
+commands=value; value; value

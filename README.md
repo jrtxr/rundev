@@ -23,41 +23,32 @@ Antes de executar, dê permissão aos scripts:
 chmod +x setup-rundev.sh run-project.sh ignite.sh clear-rundev.sh
 ```
 
-### 3. 🧩 Duplicar scripts para vários projetos
+### 3. 🧩 Configurar os scripts de cada projeto
 
-Você pode duplicar e renomear o run-project.sh para cada projeto:
-OBS: APENAS O RUN-PROJECT PRECISA SER DUPLICADO! setup-rundev.sh e ignite.sh são únicos!
+Você só precisa configurar os aliases no arquivo projects.txt.
+Esse arquivo segue o seguinte formato:
 
 ```bash
-cp run-project.sh run-todo.sh
-cp run-project.sh run-api.sh
+alias_name:
+target_dir_name:
+commands
+
 ```
 
-### 4. ⚙️ Configurar variáveis nos arquivos
+Onde:
 
-a) setup-rundev.sh
-Edite este trecho no script e aponte para o local onde os esses scripts ficarão:
+alias_name é o nome do comando que será usado no terminal.
 
-```bash
-BASE_PATH=$HOME/Documentos/git/run-projects
-```
+target_dir_name é o nome da pasta do projeto que será buscada.
 
-b) run-todo.sh
-Configure as variáveis para o seu projeto:
+commands são os comandos que serão executados no diretório do projeto.
 
-```bash
-TARGET_DIR_NAME="to-do"
-BASE_PATH=~/Documentos/git
-COMMANDS=("git branch" "yarn" "yarn dev")
-```
+#### Tanto os projetos que vc irá rodar, quanto esse projeto, devem estar no diretorio Documentos ou Documents!
 
-### 5. 🧷 Registrar os comandos personalizados
-
-Para cada script criado, registre um alias com setup-rundev.sh:
+### 4. ⚙️ Registrar os comandos personalizados
 
 ```bash
-./setup-rundev.sh run-todo.sh to-do
-./setup-rundev.sh run-api.sh api
+./setup-rundev.sh
 ```
 
 Isso criará comandos como:
@@ -67,7 +58,7 @@ rundev to-do
 rundev api
 ```
 
-### 6. 🧪 Recarregar o terminal
+### 5. 🧪 Recarregar o terminal
 
 Para ativar os comandos rundev, reinicie o terminal ou rode:
 
@@ -77,7 +68,7 @@ source ~/.bashrc
 source ~/.zshrc
 ```
 
-### 6. 🧪 Recarregar o terminal
+### 6. Rodar o projeto
 
 Agora você pode rodar seus projetos com apenas:
 
@@ -85,7 +76,7 @@ Agora você pode rodar seus projetos com apenas:
 rundev to-do
 ```
 
-### 6. Remover alias e funções
+### 7. ⚠️ Remover alias e funções
 
 ```bash
 /.clear-rundev.sh
