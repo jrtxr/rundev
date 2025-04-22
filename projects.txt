@@ -4,10 +4,16 @@
 # commands=valor
 # cada projeto deve ser separado por uma linha
 
-alias_name=value
-target_dir_name=value
-commands=value; value
+alias_name=clear
+target_dir_name=rundev
+commands=./clear-rundev.sh
+
+alias_name=setup
+target_dir_name=rundev
+commands=./setup-rundev.sh
 
 alias_name=value
 target_dir_name=value
-commands=value; value; value
+commands=value
+
+
