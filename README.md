@@ -1,9 +1,9 @@
 # 🧰 Projeto: `rundev`
 
-Automatize o processo de iniciar seus projetos com comandos personalizados usando um simples comando no terminal como:
+Simplifique o processo de startar seus projetos com comandos personalizados utilizando um simples comando no terminal como:
 
 ```bash
-rundev to-do
+rundev tdw
 ```
 
 ## 🚀 Passo a passo para rodar o projeto
@@ -29,10 +29,9 @@ Você só precisa configurar os aliases no arquivo projects.txt.
 Esse arquivo segue o seguinte formato:
 
 ```bash
-alias_name:
-target_dir_name:
-commands
-
+# alias_name=valor
+# target_dir_name=valor
+# commands=valor
 ```
 
 Onde:
@@ -41,9 +40,17 @@ alias_name é o nome do comando que será usado no terminal.
 
 target_dir_name é o nome da pasta do projeto que será buscada.
 
-commands são os comandos que serão executados no diretório do projeto.
+commands são os comandos que serão executados no diretório do projeto para starta-lo.
 
-#### Tanto os projetos que vc irá rodar, quanto esse projeto, devem estar no diretorio Documentos ou Documents!
+Exemplo:
+
+```bash
+# alias_name=tdw
+# target_dir_name=to-do-web
+# commands=git branch; yarn; yarn dev
+```
+
+#### Tanto os projetos que vc irão rodar, quanto esse projeto, devem estar no diretorio Documentos ou Documents!
 
 ### 4. ⚙️ Registrar os comandos personalizados
 
@@ -54,8 +61,7 @@ commands são os comandos que serão executados no diretório do projeto.
 Isso criará comandos como:
 
 ```bash
-rundev to-do
-rundev api
+rundev tdw
 ```
 
 ### 5. 🧪 Recarregar o terminal
