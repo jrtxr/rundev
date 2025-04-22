@@ -3,7 +3,7 @@
 script_name="$1"
 alias_name="$2"
 
-BASE_PATH=\$HOME/Documentos/git/run-projects
+BASE_PATH=\$HOME/Documentos/git/rundev
 
 if [ -z "$script_name" ] || [ -z "$alias_name" ]; then
   echo "Uso: ./setup-rundev.sh <nome-do-script> <apelido>"
