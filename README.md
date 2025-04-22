@@ -20,7 +20,7 @@ cd rundev
 Antes de executar, dê permissão aos scripts:
 
 ```bash
-chmod +x setup-rundev.sh run-project.sh ignite.sh
+chmod +x setup-rundev.sh run-project.sh ignite.sh clear-rundev.sh
 ```
 
 ### 3. 🧩 Duplicar scripts para vários projetos
@@ -85,12 +85,19 @@ Agora você pode rodar seus projetos com apenas:
 rundev to-do
 ```
 
+### 6. Remover alias e funções
+
+```bash
+/.clear-rundev.sh
+```
+
 ## 🗂 Estrutura sugerida de diretórios
 
 ```bash
 ~/Documentos/git/run-projects/
+├── clear-rundev.sh
 ├── run-todo.sh
-├── run-api.sh
+├── run-project.sh
 ├── ignite.sh
 └── setup-rundev.sh
 ```
