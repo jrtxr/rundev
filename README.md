@@ -106,3 +106,7 @@ rundev to-do
 
 Este projeto está licenciado sob a Licença MIT.
 Sinta-se à vontade para usar, modificar e compartilhar. 😄
+
+# realizar modificação para adicionar alias no lugar de substituir
+
+# realizar modificação para só precisar alterar a variavel de ambiendo com o nome do projeto e os comandos

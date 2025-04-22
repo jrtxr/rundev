@@ -10,12 +10,12 @@ fi
 
 echo "Removendo função 'rundev' do $rc_file..."
 
-sed -i '/rundev()/,/^}/d' "$rc_file"
+sed -i '/rundev() {/,/}/d' "$rc_file"
 
-if grep -q "rundev" "$rc_file"; then
-  echo "Falha ao remover a função 'rundev'."
+if grep -q "rundev()" "$rc_file"; then
+  echo "⚠️ Falha ao remover a função 'rundev'."
 else
-  echo "Função 'rundev' removida com sucesso."
+  echo "✅ Função 'rundev' removida com sucesso."
 fi
 
-echo "Para finalizar, execute: source $rc_file ou reinicie o terminal."
+echo "🔁 Para finalizar, execute: source $rc_file ou reinicie o terminal."

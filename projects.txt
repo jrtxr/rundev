@@ -1,0 +1,6 @@
+# Cada projeto deve seguir esse formato:
+# alias_name=valor
+# target_dir_name=valor
+# commands=valor
+# cada projeto deve ser separado por uma linha
+
