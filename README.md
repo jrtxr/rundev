@@ -26,7 +26,7 @@ chmod +x setup-rundev.sh run-project.sh ignite.sh
 ### 3. ⚙️ Configurar variáveis nos arquivos
 
 a) setup-rundev.sh
-Edite este trecho no script e aponte para o local onde os seus scripts de projetos estão:
+Edite este trecho no script e aponte para o local onde os esses scripts ficarão:
 
 ```bash
 BASE_PATH=$HOME/Documentos/git/run-projects
