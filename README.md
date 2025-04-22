@@ -23,7 +23,17 @@ Antes de executar, dê permissão aos scripts:
 chmod +x setup-rundev.sh run-project.sh ignite.sh
 ```
 
-### 3. ⚙️ Configurar variáveis nos arquivos
+### 3. 🧩 Duplicar scripts para vários projetos
+
+Você pode duplicar e renomear o run-project.sh para cada projeto:
+OBS: APENAS O RUN-PROJECT PRECISA SER DUPLICADO! setup-rundev.sh e ignite.sh são únicos!
+
+```bash
+cp run-project.sh run-todo.sh
+cp run-project.sh run-api.sh
+```
+
+### 4. ⚙️ Configurar variáveis nos arquivos
 
 a) setup-rundev.sh
 Edite este trecho no script e aponte para o local onde os esses scripts ficarão:
@@ -32,7 +42,7 @@ Edite este trecho no script e aponte para o local onde os esses scripts ficarão
 BASE_PATH=$HOME/Documentos/git/run-projects
 ```
 
-b) run-project.sh
+b) run-todo.sh
 Configure as variáveis para o seu projeto:
 
 ```bash
@@ -40,17 +50,6 @@ TARGET_DIR_NAME="to-do"
 BASE_PATH=~/Documentos/git
 COMMANDS=("git branch" "yarn" "yarn dev")
 ```
-
-### 4. 🧩 Criar scripts para vários projetos
-
-Você pode duplicar e renomear o run-project.sh para cada projeto:
-
-```bash
-cp run-project.sh run-todo.sh
-cp run-project.sh run-api.sh
-```
-
-Depois, configure o TARGET_DIR_NAME, BASE_PATH e COMMANDS em cada script com os valores específicos de cada projeto.
 
 ### 5. 🧷 Registrar os comandos personalizados
 
